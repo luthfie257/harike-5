@@ -32,11 +32,11 @@ produk.forEach (brng => {
 let cariNama = prompt('Masukkan nama barang: ');
 let hasilCari = produk.find(brng => brng.nama.toLowerCase() === cariNama.toLowerCase());
 
-// if (hasilCari) {
-//     console.log(`Mahasiswa ditemukan: ${hasilCari.nama} - Nilai : ${hasilCari.nilai} - ${hasilCari.nilai >= 80 ? 'Lulus' : 'Tidak Lulus'}`);
-// } else {
-//     console.log('Mahasiswa tidak ditemukan.');
-// }
+if (hasilCari) {
+    console.log(`Barang Ditemukan : ${hasilCari.nama} - Nilai : ${hasilCari.harga} - Stok :${hasilCari.stok >= 1 ? ' Ada' : 'Habis'}`);
+} else {
+    console.log('Mahasiswa tidak ditemukan.');
+}
 
 // while (true) {
 //     let cariNama = prompt('Masukkan nama mahasiswa yang dicari (atau ketik "keluar" untuk selesai): ');
