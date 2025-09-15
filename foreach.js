@@ -15,8 +15,8 @@ var angka = [1,2,3,4,5,6,7,8];
 
 let angka  = [1,2,3,4,5];
 
-angka.forEach(function(e){
-    console.log(e);
+angka.forEach(num =>{
+    console.log(num *2);
 });
 
 let angka = [1,2,3,4,5];
