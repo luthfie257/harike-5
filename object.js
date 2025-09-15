@@ -46,11 +46,22 @@ mahasiswa.forEach (mhs => {
 let cariNama = prompt('Masukkan nama mahasiswa yang dicari: ');
 let hasilCari = mahasiswa.find(mhs => mhs.nama.toLowerCase() === cariNama.toLowerCase());
 
-if (hasilCari) {
-    console.log(`Mahasiswa ditemukan: ${hasilCari.nama} - Nilai : ${hasilCari.nilai} - ${hasilCari.nilai >= 80 ? 'Lulus' : 'Tidak Lulus'}`);
-} else {
-    console.log('Mahasiswa tidak ditemukan.');
+// if (hasilCari) {
+//     console.log(`Mahasiswa ditemukan: ${hasilCari.nama} - Nilai : ${hasilCari.nilai} - ${hasilCari.nilai >= 80 ? 'Lulus' : 'Tidak Lulus'}`);
+// } else {
+//     console.log('Mahasiswa tidak ditemukan.');
+// }
+
+while (true) {
+    let cariNama = prompt('Masukkan nama mahasiswa yang dicari (atau ketik "keluar" untuk selesai): ');
+    if (cariNama.toLowerCase() === 'keluar') {
+        console.log('Pencarian selesai.');
+        break;
+    }
+    let hasilCari = mahasiswa.find(mhs => mhs.nama.toLowerCase() === cariNama.toLowerCase());
+    if (hasilCari) {
+        console.log(`Mahasiswa ditemukan: ${hasilCari.nama} - Nilai : ${hasilCari.nilai} - ${hasilCari.nilai >= 80 ? 'Lulus' : 'Tidak Lulus'}`);
+    } else {
+        console.log('Mahasiswa tidak ditemukan.');
+    }
 }
-
-
-// ...existing code...
