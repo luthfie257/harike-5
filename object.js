@@ -36,9 +36,9 @@ urutNilai.forEach(mhs => console.log(`${mhs.nama} - Nilai : ${mhs.nilai}`));
 
 //daftar mahasiswa dengan status lulus/tidak lulus (forEach)
 
-console.log('\Daftar Mahasiswa:');
+console.log('\Daftar Kelulusan Mahasiswa :');
 mahasiswa.forEach (mhs => {
-    let status = mhs.nilai >= 80 ? 'Lulus' : 'Tidak Lulus';
+    let status = mhs.nilai >= 70 ? 'Lulus' : 'Tidak Lulus';
     console.log(`${mhs.nama} - Nilai : ${mhs.nilai} - ${status}`);
 });
  // Mencari mahasiswa berdasarkan nama (find)
@@ -60,7 +60,7 @@ while (true) {
     }
     let hasilCari = mahasiswa.find(mhs => mhs.nama.toLowerCase() === cariNama.toLowerCase());
     if (hasilCari) {
-        console.log(`Mahasiswa ditemukan: ${hasilCari.nama} - Nilai : ${hasilCari.nilai} - ${hasilCari.nilai >= 80 ? 'Lulus' : 'Tidak Lulus'}`);
+        console.log(`Mahasiswa ditemukan: ${hasilCari.nama} - Nilai : ${hasilCari.nilai} - ${hasilCari.nilai >= 70 ? 'Lulus' : 'Tidak Lulus'}`);
     } else {
         console.log('Mahasiswa tidak ditemukan.');
     }
